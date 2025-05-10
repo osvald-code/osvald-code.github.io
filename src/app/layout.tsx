@@ -1,59 +1,11 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono, Tilt_Neon, Orbitron, Supermercado_One, Space_Mono, IBM_Plex_Mono, JetBrains_Mono, Recursive, DM_Sans } from "next/font/google";
+import { IBM_Plex_Mono } from "next/font/google";
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
-
-const tiltNeon = Tilt_Neon({
-  subsets: ["latin"],
-  weight: "variable"
-});
-
-const orbitron = Orbitron({
-  variable: "--font-orbitron",
-  subsets: ["latin"],
-});
-
-const supermercadoOne = Supermercado_One({
-  variable: "--font-supermercado-one",
-  subsets: ["latin"],
-  weight: "400"
-});
-
-const spaceMono = Space_Mono({
-  variable: "--font-spacemono-one",
-  subsets: ["latin"],
-  weight: "400"
-});
 
 const ibmPlexMono = IBM_Plex_Mono({
   variable: "--font-ibmplexmono-one",
-  subsets: ["latin"],
-  weight: "400"
-});
-
-const jetBrainsMono = JetBrains_Mono({
-  variable: "--font-jetbrainsmono-one",
-  subsets: ["latin"],
-  weight: "400"
-});
-
-const recursive = Recursive({
-  variable: "--font-recursive",
-  subsets: ["latin"],
-  weight: "400"
-});
-
-const dmSans = DM_Sans({
-  variable: "--font-dm-sans",
   subsets: ["latin"],
   weight: "400"
 });
@@ -69,7 +21,6 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    // <html lang="en" className={`${geistSans.className} ${geistMono.className} ${tiltNeon.className} ${orbitron.className} ${supermercadoOne.className} ${spaceMono.className} ${ibmPlexMono.className} ${jetBrainsMono.className} ${recursive.className}`}>
     <html lang="en" className={`${ibmPlexMono.className}`}>
     <body>{children}</body>
     </html>

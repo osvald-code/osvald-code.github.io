@@ -2,11 +2,8 @@
 
 import { useEffect, useState } from "react";
 import Link from "next/link";
-import Image from 'next/image';
-import headerImg from "./img/header.png";
 import { Moon, Sun, Smile, NotebookPen, Binary, Cpu} from "lucide-react";
-import clsx from "clsx";
-import { Card, CardHeader} from "@/components/ui/card";
+import { Card} from "@/components/ui/card";
 import { NavigationMenu, NavigationMenuItem, NavigationMenuList } from "@/components/ui/navigation-menu";
 import { Separator } from "@/components/ui/separator";
 import DecryptedText from "@/components/ui/DecryptedText";
