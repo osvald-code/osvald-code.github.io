@@ -44,7 +44,7 @@ export default function Home() {
       
       <header className="flex px-2 sm:px-6 py-4 md:px-10 center">
 
-        <h1 className="p-2 text-2xl font-bold text-neutral-900 dark:text-neutral-100 collapse sm:visible">
+        <h1 className="collapse p-2 text-2xl font-bold text-neutral-900 dark:text-neutral-100 sm:visible">
           osvald::dev(home)
         </h1>
         <NavigationMenu className="center sm:ml-auto">
