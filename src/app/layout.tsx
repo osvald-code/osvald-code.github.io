@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { IBM_Plex_Mono } from "next/font/google";
 import "./globals.css";
+import Head from "next/head";
+
 
 
 
@@ -22,6 +24,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${ibmPlexMono.className}`}>
+      <Head>
+      <link
+        rel="icon"
+        href="/icon"
+        type="image/png"
+        sizes="3300x2500"
+      />
+      </Head>
     <body>{children}</body>
     </html>
   );

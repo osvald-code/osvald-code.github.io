@@ -16,7 +16,7 @@ export default function CustNavBar({ className, pageName, siteLinks, isDark, tog
     return (
         <div className={`${className}`} {...props}>
                 <h1 className="hidden p-2 text-2xl font-bold text-neutral-900 dark:text-neutral-100 sm:block">
-                osvald::dev({pageName})
+                osvald::dev(<a href={pageName==="home"?"/.":"/"+pageName}>{pageName}</a>)
                 </h1>
                 <NavigationMenu className="mr-auto sm:ml-auto sm:mr-0">
                         <NavigationMenuList className="flex flex-row gap-4">
