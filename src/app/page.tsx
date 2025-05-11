@@ -2,11 +2,11 @@
 
 import { useEffect, useState } from "react";
 import Link from "next/link";
-import { Moon, Sun, Smile, NotebookPen, Binary, Cpu} from "lucide-react";
+import { Smile, NotebookPen, Binary, Cpu} from "lucide-react";
 import { Card} from "@/components/ui/card";
-import { NavigationMenu, NavigationMenuItem, NavigationMenuList } from "@/components/ui/navigation-menu";
 import { Separator } from "@/components/ui/separator";
 import DecryptedText from "@/components/ui/DecryptedText";
+import CustNavBar from "@/components/customnav";
 
 export default function Home() {
   const [mounted, setMounted] = useState(false);
@@ -33,29 +33,7 @@ export default function Home() {
   return (
     <main className="min-h-screen text-neutral-900 antialiased dark:bg-linear-to-r from-purple-800/20 to-slate-950 dark:text-neutral-100 transition-colors duration-300 font-sans">      
       <header className="flex px-2 sm:px-6 py-4 md:px-10 center">
-        <h1 className="hidden p-2 text-2xl font-bold text-neutral-900 dark:text-neutral-100 sm:block">
-          osvald::dev(home)
-        </h1>
-        <NavigationMenu className="center sm:ml-auto">
-          <NavigationMenuList className="flex flex-row gap-4">
-            {siteLinks.map((link) => (
-              <NavigationMenuItem key={link.url} className="font-bold text-md sm:p-2 sm:text-xl lg:text-2xl"  >
-                <Link href={link.url} className="hover:underline flex items-center whitespace-nowrap">
-                  <div className="pr-2">{link.icon} </div> {link.title}  
-                </Link>
-              </NavigationMenuItem>
-          ))}
-          </NavigationMenuList>
-        </NavigationMenu>
-        <Separator orientation="vertical" className="min-h-[35px] m-[5px] border-[1px] invisible sm:visible" />
-        
-        <button
-          aria-label="Toggle Dark Mode"
-          onClick={toggleTheme}
-          className="p-2 mr-0 rounded-full hover:bg-black/5 dark:hover:bg-white/10 transition-colors"
-        >
-          {dark ? <Sun size={25} /> : <Moon size={25} />}
-        </button>
+        <CustNavBar className="flex items-center w-[100%]" pageName="home" siteLinks={siteLinks} isDark={dark} toggleTheme={toggleTheme}/>
       </header>
       
       <Separator orientation="horizontal" className="min-h-[1px] mx-[2%] border-[1px] max-w-[95%]"/>
