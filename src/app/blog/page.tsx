@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import CustNavBar from "@/components/customnav"
-import { Home, NotebookPen, Binary, Cpu} from "lucide-react";
+import { Home, NotebookPen, Binary, Cpu, Smile} from "lucide-react";
 import { Card } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
 import DecryptedText from "@/components/ui/DecryptedText";
@@ -33,12 +33,12 @@ export default function AboutMe() {
     return ( 
 <main className="min-h-screen text-neutral-900 antialiased dark:bg-linear-to-r from-purple-800/20 to-slate-950 dark:text-neutral-100 transition-colors duration-300 font-sans">
 <header className="flex px-2 sm:px-6 py-4 md:px-10 center">
-  <CustNavBar className="flex items-center w-[100%]" pageName="about_me" siteLinks={siteLinks} isDark={dark} toggleTheme={toggleTheme}/>
+  <CustNavBar className="flex items-center w-[100%]" pageName="blog" siteLinks={siteLinks} isDark={dark} toggleTheme={toggleTheme}/>
 </header>
 <Separator orientation="horizontal" className="min-h-[1px] mx-[2%] border-[1px] max-w-[95%]"/>
       <Card className="mx-2 sm:mx-20 my-4 flex flex-col items-center lg:shadow-xl shadow-black/50 justify-center h-[100%] lg:h-[calc(90vh-4rem)] dark:bg-slate-800/10">
-        <h1 className="text-4xl font-bold">about me</h1>
-        <p className="text-lg mt-4">this is the about me page.</p>
+        <h1 className="text-4xl font-bold">blog</h1>
+        <p className="text-lg mt-4">this is the blog page.</p>
       </Card>
     </main>
   );
@@ -52,13 +52,13 @@ const siteLinks: { title: string; url: string; icon: React.ReactNode }[] = [
     icon: <Home/>,
   },
   {
+    title: "about me",
+    url: "/aboutme",
+    icon: <Smile/>,
+  },
+  {
     title: "projects",
     url: "/projects",
     icon: <Binary/>,
-  },
-  {
-    title: "blog",
-    url: "/blog",
-    icon: <NotebookPen/>,
   },
 ];

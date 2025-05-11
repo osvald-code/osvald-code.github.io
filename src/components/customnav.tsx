@@ -22,9 +22,9 @@ export default function CustNavBar({ className, pageName, siteLinks, isDark, tog
                         <NavigationMenuList className="flex flex-row gap-4">
                                 {sites.map((site) => (
                                         <NavigationMenuItem key={site.url} className="font-bold text-md sm:p-2 sm:text-xl lg:text-2xl"  >
-                                        <Link href={site.url} className="hover:underline flex items-center whitespace-nowrap">
-                                                <div className="pr-2">{site.icon} </div> {site.title}  
-                                        </Link>
+                                                <Link href={site.url} className="hover:underline flex items-center whitespace-nowrap">
+                                                        <div className="pr-2">{site.icon} </div> {site.title}  
+                                                </Link>
                                         </NavigationMenuItem>
                                 ))}
                         </NavigationMenuList>
@@ -38,7 +38,7 @@ export default function CustNavBar({ className, pageName, siteLinks, isDark, tog
                 >
                 {isDark ? <Sun size={25} /> : <Moon size={25} />} 
                 </button>
-    </div>
+        </div>
     )
 }
 

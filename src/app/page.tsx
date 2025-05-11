@@ -105,12 +105,12 @@ const siteLinks: { title: string; url: string; icon: React.ReactNode }[] = [
   },
   {
     title: "projects",
-    url: "projects-coming-soon",
+    url: "/projects",
     icon: <Binary/>,
   },
   {
     title: "blog",
-    url: "blog-coming-soon",
+    url: "/blog",
     icon: <NotebookPen/>,
   },
 ];
