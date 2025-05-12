@@ -45,7 +45,7 @@ export default function Home() {
           <p className="hidden sm:block text-3xl mr-auto px-30">
             <DecryptedText text="welcome to:"/>
           </p>
-          <h1 className="text-5xl sm:text-8xl lg:text-9xl text-center flex p-2"> 
+          <h1 className="text-5xl sm:text-7xl md:text-8xl lg:text-9xl text-center flex p-2"> 
             [<Cpu className = "py-1 w-15 h-15 sm:w-25 sm:h-25 lg:w-35 lg:h-35"/><DecryptedText text="svald::dev" />]
           </h1>
           <p className="text-4xl sm:ml-auto px-2 sm:px-30">
