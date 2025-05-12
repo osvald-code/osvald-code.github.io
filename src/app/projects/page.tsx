@@ -7,6 +7,7 @@ import { Home, NotebookPen, Binary, Cpu, Smile} from "lucide-react";
 import { Card } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
 import DecryptedText from "@/components/ui/DecryptedText";
+import CustomFooter from "@/components/customfooter";
 
 export default function AboutMe() {
       const [mounted, setMounted] = useState(false);
@@ -40,6 +41,7 @@ export default function AboutMe() {
         <h1 className="text-4xl font-bold">projects</h1>
         <p className="text-lg mt-4">this is the projects page.</p>
       </Card>
+      <CustomFooter/>
     </main>
   );
 }

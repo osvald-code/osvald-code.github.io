@@ -9,6 +9,7 @@ import { Separator } from "@/components/ui/separator";
 import DecryptedText from "@/components/ui/DecryptedText";
 import Image from "next/image";
 import logo from "../img/osvalddevlogo.png";
+import CustomFooter from "@/components/customfooter";
 
 export default function AboutMe() {
       const [mounted, setMounted] = useState(false);
@@ -43,6 +44,7 @@ export default function AboutMe() {
         <p className="text-lg mt-4">this is the about me page.</p>
         <Image src={logo} alt="cartoonOfDev" className="rounded-full mt-4"/>
       </Card>
+      <CustomFooter/>
     </main>
   );
 }

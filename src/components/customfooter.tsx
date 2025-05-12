@@ -10,7 +10,12 @@ export default function CustomFooter() {
         <ul className="p-2 flex flex-wrap items-center justify-center list-none gap-2">        
           {siteLinks.map((site) => (
             <li key={site.url}>
-                <Link href={site.url} className={badgeVariants({ variant: "outline" })}>{site.title}</Link>
+                <Link 
+                    href={site.url} 
+                    className={`${badgeVariants({ variant: "secondary" })} hover:underline`}
+                >
+                    {site.title}
+                </Link>
             </li>
              
             ))}
@@ -39,6 +44,18 @@ export default function CustomFooter() {
         {
           title: "reactbits",
             url: "https://www.reactbits.dev/",
+        },
+        {
+        title: "radix-ui",
+        url: "https://www.radix-ui.com/",
+        },
+        {
+        title: "shadcn/ui",
+        url: "https://ui.shadcn.com/",
+        },
+        {
+        title: "typescript",
+        url: "https://www.typescriptlang.org/",
         },
         {
           title: "framer",
