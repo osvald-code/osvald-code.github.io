@@ -1,4 +1,6 @@
-import { Link, NavigationMenu, NavigationMenuItem, NavigationMenuList } from "@radix-ui/react-navigation-menu"
+import { NavigationMenu, NavigationMenuItem, NavigationMenuList } from "@radix-ui/react-navigation-menu"
+import Link from "next/link";
+
 import { Separator } from "@/components/ui/separator";
 import * as React from "react"
 import { Moon, Sun } from "lucide-react";
@@ -41,4 +43,3 @@ export default function CustNavBar({ className, pageName, siteLinks, isDark, tog
         </div>
     )
 }
-

@@ -7,6 +7,7 @@ import { Card} from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
 import DecryptedText from "@/components/ui/DecryptedText";
 import CustNavBar from "@/components/customnav";
+import CustomFooter from "@/components/customfooter";
 
 export default function Home() {
   const [mounted, setMounted] = useState(false);
@@ -75,23 +76,9 @@ export default function Home() {
           </div>
         </div>
 
-        <footer className="text-xs text-neutral-500 text-center">
-          {/* to do - consider turning this inot badges, or something similar */}
-          <p className="mb-1">
-            empowered by:
-          </p>
-            <ul>
-                <li>react</li>
-                <li>next.js</li>
-                <li>tailwind CSS</li>
-                <li>lucide-react</li>
-                <li>react-bits</li>
-                <li>framer</li>
-                <li>github pages</li>
-            </ul>
-          <p>© {new Date().getFullYear()} michael osvald</p>
-        </footer>
+        
       </section>
+      <CustomFooter/>
     </main>
   );
 }
