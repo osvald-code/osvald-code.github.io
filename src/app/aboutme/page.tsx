@@ -41,8 +41,8 @@ export default function AboutMe() {
 <Separator orientation="horizontal" className="min-h-[1px] mx-[2%] border-[1px] max-w-[95%]"/>
       <Card className="mx-2 sm:mx-20 my-4 flex flex-col items-center lg:shadow-xl shadow-black/50 justify-center h-[100%] lg:h-[calc(90vh-4rem)] dark:bg-slate-800/10">
         <h1 className="text-4xl font-bold">about me</h1>
-        <p className="text-lg mt-4">this is the about me page.</p>
-        <Image src={logo} alt="cartoonOfDev" className="rounded-full mt-4"/>
+        <p className="text-lg mt-4">hey, you made it! my name is michael osvald. im a programmer driven by a passion for learning and personal development. 'honing my craft', as it were. i believe in pursuing excellence, sharing knowledge, authenticity, transparency. this site has been created be a showcase of myself, including my projects, experiments, and some of my internal contemplations. have fun!</p>
+        <Image src={logo} alt="cartoonOfDev" className="rounded-full mt-4 w-[20%]"/>
       </Card>
       <CustomFooter/>
     </main>
