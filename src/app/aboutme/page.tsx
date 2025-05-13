@@ -41,7 +41,7 @@ export default function AboutMe() {
 <Separator orientation="horizontal" className="min-h-[1px] mx-[2%] border-[1px] max-w-[95%]"/>
       <Card className="mx-2 sm:mx-20 my-4 flex flex-col items-center lg:shadow-xl shadow-black/50 justify-center h-[100%] lg:h-[calc(90vh-4rem)] dark:bg-slate-800/10">
         <h1 className="text-4xl font-bold">about me</h1>
-        <div className="text-2xl mt-4 p-5">
+        <div className="text-2xl items-center mt-4 p-5">
 <h2>hey, you made it!</h2>
 <p>my name is michael osvald</p> 
 <p>im a programmer driven by a passion for learning and personal development.</p>
