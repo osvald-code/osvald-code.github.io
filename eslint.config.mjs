@@ -13,6 +13,7 @@ const eslintConfig = [
   ...compat.config({
     extends: ['next'],
     rules: {
+    'react/no-unescaped-entities': 'off',
     '@next/next/no-explicit-any': 'off',
   },
 }),

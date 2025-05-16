@@ -45,7 +45,7 @@ export default function AboutMe() {
           <h2 className="text-2xl font-bold py-2 ">"hey, you made it!"</h2>
           <p>my name is michael osvald</p> 
           <p>im a programmer driven by a passion for learning and personal development.</p>
-          <p>&apos;honing my craft&apos;, as it were.</p> 
+          <p>-honing my craft-, as it were.</p> 
           <p>i believe in pursuing excellence, sharing knowledge, authenticity,and transparency.</p>
           <p>this site has been created be a showcase of myself, including my projects, experiments, and some of my internal contemplations.</p>
           <h3 className ="text-2xl font-bold py-2" >have fun!</h3>
