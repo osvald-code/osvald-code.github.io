@@ -39,18 +39,18 @@ export default function AboutMe() {
   <CustNavBar className="flex items-center w-[100%]" pageName="aboutme" siteLinks={siteLinks} isDark={dark} toggleTheme={toggleTheme}/>
 </header>
 <Separator orientation="horizontal" className="min-h-[1px] mx-[2%] border-[1px] max-w-[95%]"/>
-      <Card className="mx-2 sm:mx-20 my-4 flex flex-col items-center lg:shadow-xl shadow-black/50 justify-center h-[100%] lg:h-[calc(90vh-4rem)] dark:bg-slate-800/10">
-        <h1 className="text-4xl font-bold">about me</h1>
+      <Card className="mx-2 sm:mx-20 my-4 flex flex-col items-center lg:shadow-xl shadow-black/50 justify-center min-h-[100%] lg:min-h-[calc(90vh-4rem)] dark:bg-slate-800/10"> 
         <div className="flex flex-col text-center text-2xl items-center mt-4 p-5">
-<h2>hey, you made it!</h2>
-<p>my name is michael osvald</p> 
-<p>im a programmer driven by a passion for learning and personal development.</p>
-<p>&apos;honing my craft&apos;, as it were.</p> 
-<p>i believe in pursuing excellence, sharing knowledge, authenticity,and transparency.</p>
-<p>this site has been created be a showcase of myself, including my projects, experiments, and some of my internal contemplations.</p>
-<h3 className ="text-3xl font-bold" >have fun!</h3>
-</div>
-        <Image src={logo} alt="cartoonOfDev" className="rounded-full mt-4 w-[40%]"/>
+          <h1 className="text-4xl font-bold py-4">about me</h1>
+          <h2 className="text-2xl font-bold py-2 ">"hey, you made it!"</h2>
+          <p>my name is michael osvald</p> 
+          <p>im a programmer driven by a passion for learning and personal development.</p>
+          <p>&apos;honing my craft&apos;, as it were.</p> 
+          <p>i believe in pursuing excellence, sharing knowledge, authenticity,and transparency.</p>
+          <p>this site has been created be a showcase of myself, including my projects, experiments, and some of my internal contemplations.</p>
+          <h3 className ="text-2xl font-bold py-2" >have fun!</h3>
+        </div>
+        <Image src={logo} alt="cartoonOfDev" className="rounded-full mt-4 w-[30%]"/>
       </Card>
       <CustomFooter/>
     </main>
