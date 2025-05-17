@@ -29,14 +29,15 @@
     }
   },
   "include": [
+    "**/*.mdx",
     "**/*.ts",
     "**/*.tsx",
-    "**/*.mdx",
     ".next/types/**/*.ts",
-    "next-env.d.ts",
     "build/types/**/*.ts",
+    "next-env.d.ts",
     "next.config.mjs",
-    "postcss.config.mjs"
+    "postcss.config.mjs",
+    "out/types/**/*.ts"
   ],
   "exclude": [
     "node_modules"
