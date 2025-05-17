@@ -3,8 +3,6 @@ import createMDX from '@next/mdx';
 
 const nextConfig: NextConfig = {
   pageExtensions: ['js', 'jsx', 'md', 'mdx', 'ts', 'tsx'],
-  images: { unoptimized: true },  
-  basePath: process.env.NEXT_BASE_PATH, 
   distDir: 'build'
 };
 

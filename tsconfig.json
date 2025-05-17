@@ -34,8 +34,9 @@
     ".next/types/**/*.ts",
     "next-env.d.ts",
     "build/types/**/*.ts"
-, "src/app/mdx-page/page.mdx"  ],
+  ],
   "exclude": [
-    "node_modules"
+    "node_modules",
+    "**/*.mdx"
   ]
 }
