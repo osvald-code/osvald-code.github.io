@@ -87,7 +87,7 @@ export default function Home() {
 const siteLinks: { title: string; url: string; icon: React.ReactNode }[] = [
   {
     title:"about me",
-    url: "/mdx-page",
+    url: "/aboutme",
     icon: <Smile/>,
   },
   {

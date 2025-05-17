@@ -1,5 +1,6 @@
 "use client";
 
+
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import CustNavBar from "@/components/customnav"
@@ -21,9 +22,6 @@ export default function AboutMe() {
         stored === "dark" || (!stored && window.matchMedia("(prefers-color-scheme: dark)").matches);
       setDark(prefersDark);
       document.documentElement.classList.toggle("dark", prefersDark);
-
-      // Log debugging information
-      console.log("Window inner width divided by 640:", window.innerWidth / 640);
     }, []);
   
     const toggleTheme = () => {

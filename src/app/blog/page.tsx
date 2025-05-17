@@ -2,17 +2,21 @@
 
 import { useEffect, useState } from "react";
 import Link from "next/link";
+import Post from "../mdx-page/pagemount";
 import CustNavBar from "@/components/customnav"
 import { Home, NotebookPen, Binary, Cpu, Smile} from "lucide-react";
 import { Card } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
 import DecryptedText from "@/components/ui/DecryptedText";
 import CustomFooter from "@/components/customfooter";
+import { Button } from "@/components/ui/button";
+import { posts } from "../mdx-page/posts";
 
 export default function AboutMe() {
       const [mounted, setMounted] = useState(false);
       const [dark, setDark] = useState(false);
-    
+      const [postName, setPostName] = useState<string>("b1");
+      
       // Mount‑only effect to hydrate theme from localStorage
       useEffect(() => {
         setMounted(true);
@@ -31,6 +35,9 @@ export default function AboutMe() {
       };
     
       if (!mounted) return null; // prevent hydration mismatch
+
+      
+
     return ( 
 <main className="min-h-screen text-neutral-900 antialiased dark:bg-linear-to-r from-purple-800/20 to-slate-950 dark:text-neutral-100 transition-colors duration-300 font-sans">
 <header className="flex px-2 sm:px-6 py-4 md:px-10 center">
@@ -40,6 +47,18 @@ export default function AboutMe() {
       <Card className="mx-2 sm:mx-20 my-4 flex flex-col items-center lg:shadow-xl shadow-black/50 justify-center h-[100%] lg:h-[calc(90vh-4rem)] dark:bg-slate-800/10">
         <h1 className="text-4xl font-bold">blog</h1>
         <p className="text-lg mt-4">this is the blog page.</p>
+        <div className="prose prose-headings:mt-8 prose-headings:font-semibold prose-headings:text-black prose-h1:text-5xl prose-h2:text-4xl prose-h3:text-3xl prose-h4:text-2xl prose-h5:text-xl prose-h6:text-lg dark:prose-headings:text-white">
+          <Post postName={postName}/>
+            <Button
+            onClick={() => {
+              const currentIndex = posts.findIndex(p => p.name === postName);
+              const nextIndex = (currentIndex + 1) % posts.length;
+              setPostName(posts[nextIndex].name);
+            }}
+            >
+            Next
+            </Button>
+        </div>
       </Card>
       <CustomFooter/>
     </main>
