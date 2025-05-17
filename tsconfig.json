@@ -34,7 +34,9 @@
     "**/*.mdx",
     ".next/types/**/*.ts",
     "next-env.d.ts",
-    "build/types/**/*.ts"
+    "build/types/**/*.ts",
+    "next.config.mjs",
+    "postcss.config.mjs"
   ],
   "exclude": [
     "node_modules"
