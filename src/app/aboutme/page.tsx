@@ -40,12 +40,12 @@ export default function AboutMe() {
 </header>
 <Separator orientation="horizontal" className="min-h-[1px] mx-[2%] border-[1px] max-w-[95%]"/>
       <Card className="mx-2 sm:mx-20 my-4 flex flex-col items-center lg:shadow-xl shadow-black/50 justify-center min-h-[100%] lg:min-h-[calc(90vh-4rem)] dark:bg-slate-800/10"> 
-        <div className="flex flex-col text-center text-2xl items-center mt-4 p-5">
-          <h1 className="text-4xl font-bold py-4">about me</h1>
-          <h2 className="text-2xl font-bold py-2 ">"hey, you made it!"</h2>
+        <div className="flex flex-col text-center text-xl items-center mt-4 p-3 sm:p-5">
+          <h1 className="text-4xl font-bold py-3">about me</h1>
+          <h2 className="text-2xl font-bold py-2 ">hey, you made it!</h2>
           <p>my name is michael osvald</p> 
           <p>im a programmer driven by a passion for learning and personal development.</p>
-          <p>-honing my craft-, as it were.</p> 
+          <p>"honing my craft" - as it were.</p> 
           <p>i believe in pursuing excellence, sharing knowledge, authenticity,and transparency.</p>
           <p>this site has been created be a showcase of myself, including my projects, experiments, and some of my internal contemplations.</p>
           <h3 className ="text-2xl font-bold py-2" >have fun!</h3>

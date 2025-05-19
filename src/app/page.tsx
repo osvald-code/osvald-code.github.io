@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import Link from "next/link";
+import { posts } from "./mdx-page/posts";
 import { Smile, NotebookPen, Binary, Cpu} from "lucide-react";
 import { Card} from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
@@ -39,16 +40,16 @@ export default function Home() {
       
       <Separator orientation="horizontal" className="min-h-[1px] mx-[2%] border-[1px] max-w-[95%]"/>
       
-      <Card className="mx-2 sm:mx-20 my-4 flex flex-col items-center lg:shadow-xl shadow-black/50 justify-center h-[100%] lg:h-[calc(90vh-4rem)] dark:bg-slate-800/10">
+      <Card className="mx-[5%] my-4 flex items-center lg:shadow-xl shadow-black/50 justify-center h-[100%] lg:h-[calc(90vh-4rem)] dark:bg-slate-800/10">
         <div className="flex flex-col py-12 sm:py-6 items-center justify-center">
           {/* there is sort of a string con-cat happening here -> text is '[osvald::dev]' */}
           <p className="hidden sm:block text-3xl mr-auto px-30">
             <DecryptedText text="welcome to:"/>
           </p>
-          <h1 className="text-5xl sm:text-7xl md:text-8xl lg:text-9xl text-center flex p-2"> 
-            [<Cpu className = "py-1 w-15 h-15 sm:w-25 sm:h-25 lg:w-35 lg:h-35"/><DecryptedText text="svald::dev" />]
+          <h1 className="text-4xl md:text-7xl lg:text-8xl text-center flex p-2"> 
+            [<Cpu className = "py-1 w-12 h-12 md:w-22 md:h-22 lg:w-30 lg:h-30"/><DecryptedText text="svald::dev" />]
           </h1>
-          <p className="text-4xl sm:ml-auto px-2 sm:px-30">
+          <p className="text-2xl md:text-3xl lg:text-4xl sm:ml-auto px-2 sm:px-30">
             <DecryptedText text="coding solutions"/>
           </p>         
         </div>
@@ -58,18 +59,18 @@ export default function Home() {
         <div className="w-[min(100%,70rem)] px-4">
           <h2 className="text-lg text-center font-semibold mb-6">recent posts</h2>
           <div className="grid sm:grid-cols-1 lg:grid-cols-3 gap-8">
-            {pocketBlogs.map((blog) => (
+            {posts.map((blog) => (
               <Link
-                key={blog.url}
-                href={blog.url}
+                key={blog.name}
+                href={"blog/?postName=" + blog.name}
                 className="block rounded-xl overflow-hidden shadow transition hover:shadow-md dark:shadow-white/10"
               >
                 {/* leaving this here incase i decide to add images <img src={blog.image} alt=""className="w-full h-40 object-cover"/> */}
                 <div className="p-4 bg-white dark:bg-neutral-900">
                   <h3 className="font-medium font-text-base mb-1 line-clamp-2">
-                    {blog.title}
+                    {blog.name}
                   </h3>
-                  <p className="text-xs text-neutral-500">{blog.domain}</p>
+                  <p className="text-xs text-neutral-500">{blog.date}</p>
                 </div>
               </Link>
             ))}
@@ -106,7 +107,7 @@ const pocketBlogs: { title: string; url: string; image: string; domain: string }
   //leavine image here incase i decide to add images
   {
     title: "placeholder",
-    url: "google.ca-",
+    url: `/blog?postName=${posts[1].name}`,
     image: "",
     domain: "google.ca",
   },

@@ -2,11 +2,13 @@
 
 import { useEffect, useState } from "react";
 import Link from "next/link";
+import { useSearchParams } from 'next/navigation'
 import Post from "../mdx-page/pagemount";
 import CustNavBar from "@/components/customnav"
 import { Home, NotebookPen, Binary, Cpu, Smile} from "lucide-react";
 import { Card } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
+import { ScrollArea } from "@/components/ui/scroll-area"
 import DecryptedText from "@/components/ui/DecryptedText";
 import CustomFooter from "@/components/customfooter";
 import { Button } from "@/components/ui/button";
@@ -15,7 +17,7 @@ import { posts } from "../mdx-page/posts";
 export default function AboutMe() {
       const [mounted, setMounted] = useState(false);
       const [dark, setDark] = useState(false);
-      const [postName, setPostName] = useState<string>("b1");
+      const [postIndex, setPostName] = useState(0);
       
       // Mount‑only effect to hydrate theme from localStorage
       useEffect(() => {
@@ -33,7 +35,17 @@ export default function AboutMe() {
         document.documentElement.classList.toggle("dark", next);
         localStorage.setItem("theme", next ? "dark" : "light");
       };
-    
+
+      const searchParams = useSearchParams();
+      const postName = searchParams.get('postName'); // Logs "search"
+
+      useEffect(() => {
+        if (postName) {
+          const idx = posts.findIndex((post) => post.name === postName);
+          if (idx !== -1) setPostName(idx);
+        }
+      }, [postName]);
+
       if (!mounted) return null; // prevent hydration mismatch
 
       
@@ -44,21 +56,20 @@ export default function AboutMe() {
   <CustNavBar className="flex items-center w-[100%]" pageName="blog" siteLinks={siteLinks} isDark={dark} toggleTheme={toggleTheme}/>
 </header>
 <Separator orientation="horizontal" className="min-h-[1px] mx-[2%] border-[1px] max-w-[95%]"/>
-      <Card className="mx-2 sm:mx-20 my-4 flex flex-col items-center lg:shadow-xl shadow-black/50 justify-center h-[100%] lg:h-[calc(90vh-4rem)] dark:bg-slate-800/10">
+      <Card className="mx-2 sm:mx-20 my-4 items-center lg:shadow-xl shadow-black/50 justify-center h-[100%] lg:h-[calc(100vh-4rem)] dark:bg-slate-800/10">
         <h1 className="text-4xl font-bold">blog</h1>
-        <p className="text-lg mt-4">this is the blog page.</p>
-        <div className="prose prose-headings:mt-8 prose-headings:font-semibold prose-headings:text-black prose-h1:text-5xl prose-h2:text-4xl prose-h3:text-3xl prose-h4:text-2xl prose-h5:text-xl prose-h6:text-lg dark:prose-headings:text-white">
-          <Post postName={postName}/>
-            <Button
-            onClick={() => {
-              const currentIndex = posts.findIndex(p => p.name === postName);
-              const nextIndex = (currentIndex + 1) % posts.length;
-              setPostName(posts[nextIndex].name);
-            }}
-            >
-            Next
-            </Button>
-        </div>
+        <p className="text-lg mt-4">{posts[postIndex].name}</p>
+        <ScrollArea className="prose h-[80%] w-[100%]  prose-headings:mt-8 prose-headings:font-semibold prose-headings:text-black prose-h1:text-5xl prose-h2:text-4xl prose-h3:text-3xl prose-h4:text-2xl prose-h5:text-xl prose-h6:text-lg dark:prose-headings:text-white">
+          <Post postName={posts[postIndex].name}/>
+        </ScrollArea>
+        <Button
+          onClick={() => {
+            const nextIndex = (postIndex + 1) % posts.length;
+            setPostName(nextIndex);
+          }}
+          >
+          Next Post
+          </Button>
       </Card>
       <CustomFooter/>
     </main>
