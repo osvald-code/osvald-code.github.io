@@ -59,7 +59,7 @@ export default function Home() {
         <div className="w-[min(100%,70rem)] px-4">
           <h2 className="text-lg text-center font-semibold mb-6">recent posts</h2>
           <div className="grid sm:grid-cols-1 lg:grid-cols-3 gap-8">
-            {posts.map((blog) => (
+            {posts.slice(0,3).map((blog) => (
               <Link
                 key={blog.name}
                 href={"blog/?postName=" + blog.name}
