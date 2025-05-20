@@ -5,7 +5,7 @@ import remarkGfm   from 'remark-gfm'
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   pageExtensions: ['js','jsx','ts','tsx','md','mdx'],
-  experimental: { mdxRs: false },   // ← JS compiler
+  experimental: { mdxRs: true },   // ← JS compiler
   distDir: 'out',
   output: 'export',
   images: {unoptimized: true},
