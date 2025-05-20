@@ -6,11 +6,14 @@ import remarkGfm   from 'remark-gfm'
 const nextConfig = {
   pageExtensions: ['js','jsx','ts','tsx','md','mdx'],
   experimental: { mdxRs: false },   // ← JS compiler
+  distDir: 'out',
+  output: 'export',
+  images: {unoptimized: true},
 }
 
 const withMDX = createMDX({
   options: {
-    remarkPlugins: [],     // must be a *function*, not undefined
+    remarkPlugins: [createMDX],     // must be a *function*, not undefined
     rehypePlugins: [],
   },
 })
