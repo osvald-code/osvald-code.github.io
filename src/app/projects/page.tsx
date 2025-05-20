@@ -35,35 +35,49 @@ export default function AboutMe() {
     return ( 
       <main className="min-h-screen text-neutral-900 antialiased dark:bg-linear-to-r from-purple-800/20 to-slate-950 dark:text-neutral-100 transition-colors duration-300 font-sans">
         <header className="flex px-2 sm:px-6 py-4 md:px-10 center">
-          <CustNavBar className="flex items-center w-[100%]" pageName="projects" siteLinks={siteLinks} isDark={dark} toggleTheme={toggleTheme}/>
+          <CustNavBar className="flex items-center w-[100%]" pageName="projects" isDark={dark} toggleTheme={toggleTheme}/>
         </header>
       <Separator orientation="horizontal" className="min-h-[1px] mx-[2%] border-[1px] max-w-[95%]"/>
-      <Card className="mx-2 sm:mx-20 my-4 flex items-center lg:shadow-xl shadow-black/50 justify-center h-[100%] lg:h-[calc(90vh-4rem)] dark:bg-slate-800/10">
-        <p className="text-lg mt-4">this is the projects page.</p>
-        <div className="flex grid bg-black h-[100%] order sm:grid-cols-3 items-center justify-center gap-10 sm:gap-40">
-          
+      {/* <Card className="mx-2 sm:mx-20 my-4 min-h-[100%] flex items-center shadow-sm shadow-black/50 justify-center dark:bg-slate-800/10"> */}
+        <h1 className="text-lg mt-4">this is the projects page.</h1>
+        <div className="w-[100%] min-h-[100%] flex order grid gird-cols-1 sm:grid-cols-2 px-4 items-center justify-center gap-4">
+            {projects.map((projects) =>
+              (
+                <Card key={projects.title} className="min-w-[100%] border flex items-center justify-center dark:bg-slate-800/0">
+                        <h1>{projects.title}</h1>
+                        <p className="text-lg mt-4">{projects.description}</p>
+                        <Link href={projects.url} className="hover:underline flex items-center whitespace-nowrap">
+                              github
+                        </Link>
+                </Card>
+              ))
+            }           
         </div>
-      </Card>
+      {/* </Card> */}
       <CustomFooter/>
     </main>
   );
 }
 
-
-const siteLinks: { title: string; url: string; icon: React.ReactNode }[] = [
+const projects: { title: string; url: string; description: string}[] = [
   {
-    title:"home",
+    title:"Project 1",
     url: "/.",
-    icon: <Home/>,
+    description: "this is a placeholder description", 
   },
   {
-    title: "about me",
-    url: "/aboutme",
-    icon: <Smile/>,
+    title: "Project 2",
+    url: "/.",
+    description: "this is a placeholder description", 
+  },
+    {
+    title: "Project 3",
+    url: "/.",
+    description: "this is a placeholder description", 
   },
   {
-    title: "blog",
-    url: "/blog",
-    icon: <NotebookPen/>,
+    title: "Project 4",
+    url: "/.",
+    description: "this is a placeholder description", 
   },
 ];

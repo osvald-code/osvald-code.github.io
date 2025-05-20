@@ -36,7 +36,7 @@ export default function AboutMe() {
     return ( 
 <main className="min-h-screen text-neutral-900 antialiased dark:bg-linear-to-r from-purple-800/20 to-slate-950 dark:text-neutral-100 transition-colors duration-300 font-sans">
 <header className="flex px-2 sm:px-6 py-4 md:px-10 center">
-  <CustNavBar className="flex items-center w-[100%]" pageName="aboutme" siteLinks={siteLinks} isDark={dark} toggleTheme={toggleTheme}/>
+  <CustNavBar className="flex items-center w-[100%]" pageName="about_me" isDark={dark} toggleTheme={toggleTheme}/>
 </header>
 <Separator orientation="horizontal" className="min-h-[1px] mx-[2%] border-[1px] max-w-[95%]"/>
       <Card className="mx-2 sm:mx-20 my-4 flex flex-col items-center lg:shadow-xl shadow-black/50 justify-center min-h-[100%] lg:min-h-[calc(90vh-4rem)] dark:bg-slate-800/10"> 
@@ -57,21 +57,3 @@ export default function AboutMe() {
   );
 }
 
-
-const siteLinks: { title: string; url: string; icon: React.ReactNode }[] = [
-  {
-    title:"home",
-    url: "/.",
-    icon: <Home/>,
-  },
-  {
-    title: "projects",
-    url: "/projects",
-    icon: <Binary/>,
-  },
-  {
-    title: "blog",
-    url: "/blog",
-    icon: <NotebookPen/>,
-  },
-];

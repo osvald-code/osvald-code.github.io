@@ -3,13 +3,12 @@ import Link from "next/link";
 
 import { Separator } from "@/components/ui/separator";
 import * as React from "react"
-import { Moon, Sun } from "lucide-react";
+import { Binary, Home, Moon, NotebookPen, Smile, Sun } from "lucide-react";
 
 
-export default function CustNavBar({ className, pageName, siteLinks, isDark, toggleTheme, ...props }: { 
+export default function CustNavBar({ className, pageName, isDark, toggleTheme, ...props }: { 
     className?: string; 
     pageName: string;
-    siteLinks: { title: string; url: string; icon: React.ReactNode }[]; 
     isDark: boolean; 
     toggleTheme: () => void; 
 }) {
@@ -18,16 +17,17 @@ export default function CustNavBar({ className, pageName, siteLinks, isDark, tog
     return (
         <div className={`${className}`} {...props}>
                 <h1 className="hidden p-2 text-2xl font-bold text-neutral-900 dark:text-neutral-100 sm:block">
-                osvald::dev(<a href={pageName==="home"?"/.":"/"+pageName}>{pageName}</a>)
+                        osvald::dev(<a href={pageName==="home"?"/.":"/"+pageName}>{pageName}</a>)
                 </h1>
                 <NavigationMenu className="mr-auto sm:ml-auto sm:mr-0">
                         <NavigationMenuList className="flex flex-row gap-4">
-                                {sites.map((site) => (
-                                        <NavigationMenuItem key={site.url} className="font-bold text-md sm:p-2 sm:text-xl lg:text-2xl"  >
-                                                <Link href={site.url} className="hover:underline flex items-center whitespace-nowrap">
-                                                        <div className="pr-2">{site.icon} </div> {site.title}  
-                                                </Link>
-                                        </NavigationMenuItem>
+                                {siteLinks.map((site) =>
+                                        site.title === pageName ? null : (
+                                                <NavigationMenuItem key={site.url} className="font-bold text-md sm:p-2 sm:text-xl lg:text-2xl">
+                                                        <Link href={site.url} className="hover:underline flex items-center whitespace-nowrap">
+                                                                <span className="pr-2">{site.icon}</span>{site.title}
+                                                        </Link>
+                                                </NavigationMenuItem>
                                 ))}
                         </NavigationMenuList>
                 </NavigationMenu>
@@ -43,3 +43,26 @@ export default function CustNavBar({ className, pageName, siteLinks, isDark, tog
         </div>
     )
 }
+
+const siteLinks: { title: string; url: string; icon: React.ReactNode }[] = [
+  {
+    title:"home",
+    url: "/.",
+    icon: <Home/>,
+  },
+  {
+    title: "about_me",
+    url: "/aboutme",
+    icon: <Smile/>,
+  },
+    {
+    title: "projects",
+    url: "/projects",
+    icon: <Binary/>,
+  },
+  {
+    title: "blog",
+    url: "/blog",
+    icon: <NotebookPen/>,
+  },
+];

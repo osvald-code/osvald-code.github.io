@@ -35,7 +35,7 @@ export default function Home() {
   return (
     <main className="min-h-screen text-neutral-900 antialiased dark:bg-linear-to-r from-purple-800/20 to-slate-950 dark:text-neutral-100 transition-colors duration-300 font-sans">      
       <header className="flex px-2 sm:px-6 py-4 md:px-10 center">
-        <CustNavBar className="flex items-center w-[100%]" pageName="home" siteLinks={siteLinks} isDark={dark} toggleTheme={toggleTheme}/>
+        <CustNavBar className="flex items-center w-[100%]" pageName="home" isDark={dark} toggleTheme={toggleTheme}/>
       </header>
       
       <Separator orientation="horizontal" className="min-h-[1px] mx-[2%] border-[1px] max-w-[95%]"/>
@@ -76,51 +76,9 @@ export default function Home() {
             ))}
           </div>
         </div>
-
-        
       </section>
       <CustomFooter/>
     </main>
   );
 }
 
-
-const siteLinks: { title: string; url: string; icon: React.ReactNode }[] = [
-  {
-    title:"about me",
-    url: "/aboutme",
-    icon: <Smile/>,
-  },
-  {
-    title: "projects",
-    url: "/projects",
-    icon: <Binary/>,
-  },
-  {
-    title: "blog",
-    url: "/blog",
-    icon: <NotebookPen/>,
-  },
-];
-
-const pocketBlogs: { title: string; url: string; image: string; domain: string }[] = [
-  //leavine image here incase i decide to add images
-  {
-    title: "placeholder",
-    url: `/blog?postName=${posts[1].name}`,
-    image: "",
-    domain: "google.ca",
-  },
-  {
-    title: "placeholder",
-    url: "google.ca+",
-    image: "",
-    domain: "google.ca",
-  },
-  {
-    title: "placeholder",
-    url: "google.ca*",
-    image: "",
-    domain: "google.ca",
-  },
-];
