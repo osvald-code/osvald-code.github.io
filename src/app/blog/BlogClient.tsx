@@ -62,7 +62,7 @@ export default function BlogClient() {
         <CustNavBar className="flex items-center w-[100%]" pageName="blog" isDark={dark} toggleTheme={toggleTheme}/>
       </header>
       <Separator orientation="horizontal" className="min-h-[1px] mx-[2%] border-[1px] max-w-[95%]"/>
-      <Card className="mx-2 sm:mx-20 my-4 items-center lg:shadow-xl shadow-black/50 justify-center dark:bg-slate-800/10">
+      <Card className="mx-2 sm:mx-20 my-4 items-center lg:shadow-xl shadow-black/50 justify-center dark:text-white dark:bg-slate-800/10">
         <h1 className="text-4xl font-bold">blog</h1>
         <Pagination className="mt-4 w-[100%]">
           <PaginationContent>
