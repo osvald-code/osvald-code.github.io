@@ -5,10 +5,10 @@ import remarkGfm   from 'remark-gfm'
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   pageExtensions: ['js','jsx','ts','tsx','md','mdx'],
-  experimental: { mdxRs: true },   // ← JS compiler
+  experimental: { mdxRs: false },
   distDir: 'out',
   output: 'export',
-  images: {unoptimized: true},
+  images: { unoptimized: true },
 }
 
 const withMDX = createMDX({
