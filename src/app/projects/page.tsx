@@ -61,14 +61,14 @@ export default function AboutMe() {
 
 const projects: { title: string; url: string; description: string}[] = [
   {
-    title:"Project 1",
+    title:"python twitter bot",
     url: "/.",
-    description: "this is a placeholder description", 
+    description: "a python based project utilizing Google Cloud Scheduler to daily post an API extracted trading card to Twitter. this project was able to post images to twitter before image posting was officially available on twitter api v2. this project also filtered out over-duplicated and atypical format cards, as well as combining multi-image cards into a single image", 
   },
   {
-    title: "Project 2",
+    title: "Arduino Loop Switcher",
     url: "/.",
-    description: "this is a placeholder description", 
+    description: "a C++ based project, this signal controller used an ardunino connected to an 8 channel optical relay to allow dynamic circuit paths for a guitar pedal signal chain. this also allowed for presets to be save and loaded via the EEPROM", 
   },
     {
     title: "Project 3",
