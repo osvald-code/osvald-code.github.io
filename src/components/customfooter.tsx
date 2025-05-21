@@ -5,7 +5,7 @@ export default function CustomFooter() {
     return (
         <footer className="text-xs text-neutral-500 text-center">
           <p className="mb-1">
-            empowered by:
+            site empowered by:
           </p>
         <ul className="p-2 flex flex-wrap items-center justify-center list-none gap-2">        
           {siteLinks.map((site) => (
