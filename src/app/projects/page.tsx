@@ -39,8 +39,8 @@ export default function AboutMe() {
         </header>
       <Separator orientation="horizontal" className="min-h-[1px] mx-[2%] border-[1px] max-w-[95%]"/>
       {/* <Card className="mx-2 sm:mx-20 my-4 min-h-[100%] flex items-center shadow-sm shadow-black/50 justify-center dark:bg-slate-800/10"> */}
-        <h1 className="text-lg mt-4">this is the projects page.</h1>
-        <div className="w-[100%] min-h-[100%] flex order grid gird-cols-1 sm:grid-cols-2 px-4 items-center justify-center gap-4">
+        <h1 className="text-xl sm:text-2xl lg:text-4xl mt-4">projects</h1>
+        <div className="w-[100%] min-h-[100%] flex order grid gird-cols-1 sm:grid-cols-2 p-4 items-center justify-center gap-4">
             {projects.map((projects) =>
               (
                 <Card key={projects.title} className="min-w-[100%] border flex items-center justify-center dark:bg-slate-800/0">
@@ -66,14 +66,14 @@ const projects: { title: string; url: string; description: string}[] = [
     description: "a python based project utilizing Google Cloud Scheduler to daily post an API extracted trading card to Twitter. this project was able to post images to twitter before image posting was officially available on twitter api v2. this project also filtered out over-duplicated and atypical format cards, as well as combining multi-image cards into a single image", 
   },
   {
-    title: "Arduino Loop Switcher",
+    title: "arduino loop switcher",
     url: "/.",
     description: "a C++ based project, this signal controller used an ardunino connected to an 8 channel optical relay to allow dynamic circuit paths for a guitar pedal signal chain. this also allowed for presets to be save and loaded via the EEPROM", 
   },
     {
-    title: "Project 3",
+    title: "GBA Platformer",
     url: "/.",
-    description: "this is a placeholder description", 
+    description: "while only in its early stages, this C based project uses the devkitARM toolchain to render, move, and animate bitmap tiles them within a GBA emulator.", 
   },
   {
     title: "Project 4",
