@@ -7,7 +7,7 @@ import CustNavBar from "@/components/customnav"
 import { Home, NotebookPen, Binary, Cpu, Smile} from "lucide-react";
 import { Card } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
-import { ScrollArea } from "@/components/ui/scroll-area"
+import { ScrollArea, ScrollBar } from "@/components/ui/scroll-area"
 import DecryptedText from "@/components/ui/DecryptedText";
 import CustomFooter from "@/components/customfooter";
 import { Button } from "@/components/ui/button";
@@ -71,7 +71,7 @@ export default function BlogClient() {
                 onClick={() => {
                   const nextIndex = Number((postIndex - 1) > 0) ;
                   setPostName(nextIndex);
-                }} />
+                }}/>
             </PaginationItem>
             {posts.map((post, idx) =>
                           ( 
@@ -101,6 +101,7 @@ export default function BlogClient() {
         <p className="text-lg mt-4">{posts[postIndex].name}</p>
         <ScrollArea className="prose h-[80%] max-w-[100%] p-6 prose-headings:mt-8 prose-headings:font-semibold prose-h1:text-5xl prose-h2:text-4xl prose-h3:text-3xl prose-h4:text-2xl prose-h5:text-xl prose-h6:text-lg dark:prose-invert">
           <Post postName={posts[postIndex].name}/>
+           <ScrollBar orientation="horizontal" />
         </ScrollArea>
       </Card>
       <CustomFooter/>
