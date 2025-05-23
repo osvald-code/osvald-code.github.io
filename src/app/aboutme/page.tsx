@@ -10,6 +10,7 @@ import DecryptedText from "@/components/ui/DecryptedText";
 import Image from "next/image";
 import logo from "../img/osvalddevlogo.png";
 import CustomFooter from "@/components/customfooter";
+import GitHubCalendar from 'react-github-calendar';
 
 export default function AboutMe() {
       const [mounted, setMounted] = useState(false);
@@ -50,6 +51,7 @@ export default function AboutMe() {
           <p>this site has been created be a showcase of myself, including my projects, experiments, and some of my internal contemplations.</p>
           <h3 className ="text-2xl font-bold py-2" >have fun!</h3>
         </div>
+        <GitHubCalendar username="osvald-code"/>
         <Image src={logo} alt="cartoonOfDev" className="rounded-full mt-4 w-[30%]"/>
       </Card>
       <CustomFooter/>
