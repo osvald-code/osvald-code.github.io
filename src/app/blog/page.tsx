@@ -2,8 +2,7 @@
 
 import { Suspense } from "react";
 import BlogClient from "./BlogClient";
-import { Home, Smile, Binary } from "lucide-react";
-
+import { ScrollArea } from "@/components/ui/scroll-area"
 
 export default function Page() {
   return (

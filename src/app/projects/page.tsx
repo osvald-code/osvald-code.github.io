@@ -38,7 +38,7 @@ export default function AboutMe() {
           <CustNavBar className="flex items-center w-[100%]" pageName="projects" isDark={dark} toggleTheme={toggleTheme}/>
         </header>
       <Separator orientation="horizontal" className="min-h-[1px] mx-[2%] border-[1px] max-w-[95%]"/>
-      <div className="mx-2 sm:mx-20 my-4 min-h-[100%] items-center shadow-sm shadow-black/50 justify-center dark:bg-slate-800/10">
+      <div className="mx-2 sm:mx-20 my-4 min-h-[100%] items-center justify-center">
         <h1 className="text-xl sm:text-2xl lg:text-4xl py-4 flex justify-center items-center text-center">projects</h1>
         <div className="w-[100%] min-h-[100%] flex order grid gird-cols-1 sm:grid-cols-2 p-4 items-center justify-center gap-4">
             {projects.map((projects) =>
