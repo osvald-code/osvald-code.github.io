@@ -11,6 +11,7 @@ import Image from "next/image";
 import logo from "../img/osvalddevlogo.png";
 import CustomFooter from "@/components/customfooter";
 import GitHubCalendar from 'react-github-calendar';
+import Particles from "@/components/Particles";
 
 export default function AboutMe() {
       const [mounted, setMounted] = useState(false);
@@ -35,10 +36,22 @@ export default function AboutMe() {
     
       if (!mounted) return null; // prevent hydration mismatch
     return ( 
-<main className="min-h-screen text-neutral-900 antialiased dark:bg-linear-to-r from-purple-800/20 to-slate-950 dark:text-neutral-100 transition-colors duration-300 font-sans">
-<header className="flex px-2 sm:px-6 py-4 md:px-10 center">
+<main className="min-h-screen text-neutral-900 antialiased dark:text-neutral-100 transition-colors duration-300 font-sans">
+<header className="flex px-2 sm:px-6 py-4 md:px-10 sticky top-0">
   <CustNavBar className="flex items-center w-[100%]" pageName="about_me" isDark={dark} toggleTheme={toggleTheme}/>
 </header>
+   <div className="fixed inset-0 -z-10 w-full h-full pointer-events-none">
+      <Particles
+        particleColors={['#ffffff', '#ffffff']}
+        particleCount={250}
+        particleSpread={15}
+        speed={0.05}
+        particleBaseSize={100}
+        moveParticlesOnHover={true}
+        alphaParticles={false}
+        disableRotation={false}
+      />
+    </div>
 <Separator orientation="horizontal" className="min-h-[1px] mx-[2%] border-[1px] max-w-[95%]"/>
       <Card className="mx-2 sm:mx-20 my-4 flex flex-col items-center lg:shadow-xl shadow-black/50 justify-center min-h-[100%] lg:min-h-[calc(90vh-4rem)] dark:bg-slate-800/10"> 
         <div className="flex flex-col text-center text-xl items-center mt-4 p-3 sm:p-5">

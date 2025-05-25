@@ -46,9 +46,9 @@
 
 :root {
   --radius: 0.625rem;
-  --background: #f9f9fb; /* Light gray background */
-  --foreground: #1b1b1d; /* Dark text */
-  --card: #ffffff; /* White card background */
+  --background: #fafafa; /* Light gray background */
+  --foreground: #ffffff; /* Dark text */
+  --card: #fafafa; /* White card background */
   --card-foreground: #1b1b1d; /* Dark text for cards */
   --popover: #ffffff; /* White popover background */
   --popover-foreground: #1b1b1d; /* Dark text for popovers */

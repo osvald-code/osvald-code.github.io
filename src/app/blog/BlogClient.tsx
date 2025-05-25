@@ -21,6 +21,7 @@ import {
   PaginationNext,
   PaginationPrevious,
 } from "@/components/ui/pagination"
+import Particles from "@/components/Particles";
  
 
 export default function BlogClient() {
@@ -62,6 +63,18 @@ export default function BlogClient() {
         <CustNavBar className="flex items-center w-[100%]" pageName="blog" isDark={dark} toggleTheme={toggleTheme}/>
       </header>
       <Separator orientation="horizontal" className="min-h-[1px] mx-[2%] border-[1px] max-w-[95%]"/>
+      <div className="fixed inset-0 -z-10 w-full h-full pointer-events-none">
+      <Particles
+        particleColors={['#ffffff', '#ffffff']}
+        particleCount={250}
+        particleSpread={15}
+        speed={0.05}
+        particleBaseSize={100}
+        moveParticlesOnHover={true}
+        alphaParticles={false}
+        disableRotation={false}
+      />
+    </div>
       <Card className="mx-2 sm:mx-20 my-4 flex items-center lg:shadow-xl shadow-black/50 justify-center dark:bg-slate-800/10">
         <h1 className="text-4xl font-bold">blog</h1>
         <Pagination className="mt-4 w-[100%]">

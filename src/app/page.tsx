@@ -15,6 +15,7 @@ import Particles from "@/components/Particles";
 export default function Home() {
   const [mounted, setMounted] = useState(false);
   const [dark, setDark] = useState(false);
+  const [scrolled, setScrolled] = useState(false); // <-- Add this
 
   // Mount‑only effect to hydrate theme from localStorage
   useEffect(() => {
@@ -23,6 +24,11 @@ export default function Home() {
     const prefersDark = stored === "dark" || (!stored && window.matchMedia("(prefers-color-scheme: dark)").matches);
     setDark(prefersDark);
     document.documentElement.classList.toggle("dark", prefersDark);
+
+    // Scroll listener
+    const handleScroll = () => setScrolled(window.scrollY > 0);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   const toggleTheme = () => {
@@ -36,29 +42,29 @@ export default function Home() {
 
   return (
     <main className="min-h-screen text-neutral-900 antialiased  dark:text-neutral-100 transition-colors duration-300 font-sans">      
-      <header className="flex px-2 sm:px-6 py-4 md:px-10 center">
+      <header
+  className={`flex px-2 sm:px-6 py-4 md:px-10 rounded-b-lg sticky top-0 transition-all duration-300
+    ${scrolled ? "bg-zinc-900/80" : "bg-zinc-950/0"}`}
+>
         <CustNavBar className="flex items-center w-[100%]" pageName="home" isDark={dark} toggleTheme={toggleTheme}/>
       </header>
     
     {/*glitch effect for background*/}
     <div className="fixed inset-0 -z-10 w-full h-full pointer-events-none">
-{/* <div style={{ width: '100%', height: '600px', position: 'relative' }}> */}
-
-  <Particles
-    particleColors={['#ffffff', '#ffffff']}
-    particleCount={250}
-    particleSpread={15}
-    speed={0.1}
-    particleBaseSize={100}
-    moveParticlesOnHover={true}
-    alphaParticles={false}
-    disableRotation={false}
-  />
-
+      <Particles
+        particleColors={['#ffffff', '#ffffff']}
+        particleCount={250}
+        particleSpread={15}
+        speed={0.05}
+        particleBaseSize={100}
+        moveParticlesOnHover={true}
+        alphaParticles={false}
+        disableRotation={false}
+      />
     </div>
       <Separator orientation="horizontal" className="min-h-[1px] mx-[2%] border-[1px] max-w-[95%]"/>
       
-      <Card className="mx-auto sm:mx-auto my-10 sm:my-5 py-30 sm:py-2 sm:px-15 w-fit flex flex-col items-center lg:shadow-xl shadow-black/50 justify-center min-h-[100%] lg:min-h-[calc(90vh-4rem)] dark:bg-zinc-950/50">
+      <Card className="w-[90%] mx-auto sm:mx-auto my-35 sm:my-5 py-30 sm:py-2 sm:px-15 sm:w-fit flex flex-col items-center lg:shadow-xl shadow-black/50 justify-center min-h-[100%] lg:min-h-[calc(90vh-4rem)] dark:bg-zinc-950/50">
         <div className="flex flex-col items-center justify-center">
           {/* there is sort of a string con-cat happening here -> text is '[osvald::dev]' */}
           <p className="hidden sm:block text-3xl mr-auto px-30">
@@ -72,7 +78,15 @@ export default function Home() {
           </p>         
         </div>
       </Card>
-
+       <div className="flex flex-col text-center sm:text-start text-xl sm:mx-50 mt-4 p-3 sm:p-5 ">
+          <h2 className="text-2xl font-bold py-3 text-center ">hey, you made it!</h2>
+          <p>my name is michael osvald</p> 
+          <p>im a programmer driven by a passion for learning and personal development.</p>
+          <p>"honing my craft" - as it were.</p> 
+          <p>i believe in pursuing excellence, sharing knowledge, authenticity,and transparency.</p>
+          <p>this site has been created be a showcase of myself, including my projects, experiments, and some of my internal contemplations.</p>
+          <h3 className ="text-2xl font-bold py-2" >have fun!</h3>
+        </div>
       <section className="flex flex-col py-5 items-center gap-1 pb-20">
         <div className="w-[min(100%,70rem)] px-4">
           <h2 className="text-lg text-center font-semibold mb-6">recent posts</h2>
