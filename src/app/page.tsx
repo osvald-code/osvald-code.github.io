@@ -52,7 +52,7 @@ export default function Home() {
     {/*glitch effect for background*/}
     <div className="fixed inset-0 -z-10 w-full h-full pointer-events-none">
       <Particles
-        particleColors={['#ffffff', '#ffffff']}
+        particleColors={dark?['#ffffff', '#ffffff']:['#222222', '#222222']}
         particleCount={250}
         particleSpread={15}
         speed={0.05}
@@ -78,7 +78,8 @@ export default function Home() {
           </p>         
         </div>
       </Card>
-       <div className="flex flex-col text-center sm:text-start text-xl sm:mx-50 mt-4 p-3 sm:p-5 ">
+      <div className="flex flex-col items-center bg-zinc-900/25 mt-10 w-[100%] justify-center">
+       <div className="flex flex-col text-center  sm:text-start text-xl sm:mx-15 p-3 sm:p-5 ">
           <h2 className="text-2xl font-bold py-3 text-center ">hey, you made it!</h2>
           <p>my name is michael osvald</p> 
           <p>im a programmer driven by a passion for learning and personal development.</p>
@@ -87,6 +88,7 @@ export default function Home() {
           <p>this site has been created be a showcase of myself, including my projects, experiments, and some of my internal contemplations.</p>
           <h3 className ="text-2xl font-bold py-2" >have fun!</h3>
         </div>
+      </div>
       <section className="flex flex-col py-5 items-center gap-1 pb-20">
         <div className="w-[min(100%,70rem)] px-4">
           <h2 className="text-lg text-center font-semibold mb-6">recent posts</h2>
@@ -98,7 +100,7 @@ export default function Home() {
                 className="block rounded-xl overflow-hidden shadow transition hover:shadow-md dark:shadow-white/10"
               >
                 {/* leaving this here incase i decide to add images <img src={blog.image} alt=""className="w-full h-40 object-cover"/> */}
-                <div className="p-4 bg-white dark:bg-neutral-900">
+                <div className="p-4 bg-white dark:bg-neutral-900/80">
                   <h3 className="font-medium font-text-base mb-1 line-clamp-2">
                     {blog.name}
                   </h3>

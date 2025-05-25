@@ -16,7 +16,7 @@ import Particles from "@/components/Particles";
 export default function AboutMe() {
       const [mounted, setMounted] = useState(false);
       const [dark, setDark] = useState(false);
-    
+      const [scrolled, setScrolled] = useState(false); 
       // Mount‑only effect to hydrate theme from localStorage
       useEffect(() => {
         setMounted(true);
@@ -25,6 +25,11 @@ export default function AboutMe() {
           stored === "dark" || (!stored && window.matchMedia("(prefers-color-scheme: dark)").matches);
         setDark(prefersDark);
         document.documentElement.classList.toggle("dark", prefersDark);
+      
+        // Scroll listener
+        const handleScroll = () => setScrolled(window.scrollY > 0);
+        window.addEventListener("scroll", handleScroll);
+        return () => window.removeEventListener("scroll", handleScroll);
       }, []);
     
       const toggleTheme = () => {
@@ -37,7 +42,8 @@ export default function AboutMe() {
       if (!mounted) return null; // prevent hydration mismatch
     return ( 
 <main className="min-h-screen text-neutral-900 antialiased dark:text-neutral-100 transition-colors duration-300 font-sans">
-<header className="flex px-2 sm:px-6 py-4 md:px-10 sticky top-0">
+<header className={`flex px-2 sm:px-6 py-4 md:px-10 rounded-b-lg sticky top-0 transition-all duration-300
+    ${scrolled ? "bg-zinc-900/80" : "bg-zinc-950/0"}`}>
   <CustNavBar className="flex items-center w-[100%]" pageName="about_me" isDark={dark} toggleTheme={toggleTheme}/>
 </header>
    <div className="fixed inset-0 -z-10 w-full h-full pointer-events-none">
@@ -64,7 +70,9 @@ export default function AboutMe() {
           <p>this site has been created be a showcase of myself, including my projects, experiments, and some of my internal contemplations.</p>
           <h3 className ="text-2xl font-bold py-2" >have fun!</h3>
         </div>
-        <GitHubCalendar username="osvald-code"/>
+        <div className="flex flex-col text-center text-xl rounded-xl bg-zinc-900/30 items-center mt-4 p-3 sm:p-5">
+          <GitHubCalendar username="osvald-code"/>
+        </div>
         <Image src={logo} alt="cartoonOfDev" className="rounded-full mt-4 w-[30%]"/>
       </Card>
       <CustomFooter/>

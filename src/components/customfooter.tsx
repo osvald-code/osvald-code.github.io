@@ -12,6 +12,7 @@ export default function CustomFooter() {
             <li key={site.url}>
                 <Link 
                     href={site.url} 
+                    target="_blank"
                     className={`${badgeVariants({ variant: "secondary" })} hover:underline`}
                 >
                     {site.title}
@@ -58,8 +59,8 @@ export default function CustomFooter() {
         url: "https://www.typescriptlang.org/",
         },
         {
-          title: "framer",
-          url: "https://www.framer.com/",
+          title: "motion",
+          url: "https://www.motion.dev/",
         },
         {
           title: "github pages",
