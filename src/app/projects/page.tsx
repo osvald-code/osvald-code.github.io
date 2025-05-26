@@ -56,7 +56,7 @@ export default function AboutMe() {
         <div className="w-[100%] min-h-[100%] flex order grid gird-cols-1 sm:grid-cols-2 p-4 items-center justify-center gap-4">
             {projects.map((projects) =>
               (
-                <Card key={projects.title} className="relative min-w-[100%] h-100 border items-center dark:bg-slate-800/0 text-center">
+                <Card key={projects.title} className="relative min-w-[100%] h-auto sm:h-100 border items-center dark:bg-slate-800/0 text-center">
                         <h1 className="static top-0 text-xl sm:text-2xl lg:text-3xl">{projects.title}</h1>
                         <p className="text-lg px-5 text-start">{projects.description}</p>
                         <Link href={projects.url} className="absolute bottom-0 py-3 hover:underline flex items-center whitespace-nowrap">
