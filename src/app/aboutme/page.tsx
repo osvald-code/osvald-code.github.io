@@ -71,7 +71,7 @@ export default function AboutMe() {
           <p>this site has been created be a showcase of myself, including my projects, experiments, and some of my internal contemplations.</p>
           <h3 className ="text-2xl font-bold py-2" >have fun!</h3>
         </div>
-        <ScrollArea className="w-[100%] flex flex-col text-center text-xl rounded-xl bg-zinc-900/30 justify-center sm:items-center mt-4 p-3 sm:p-5">
+        <ScrollArea dir="rtl" className="w-[100%] flex flex-col text-center text-xl rounded-xl bg-zinc-900/30 justify-center sm:items-center mt-4 p-3 sm:p-5">
           <GitHubCalendar username="osvald-code"/>
 <ScrollBar orientation="horizontal"/>
         </ScrollArea>
