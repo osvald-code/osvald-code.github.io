@@ -34,7 +34,7 @@ export default function AboutMe() {
     
     if (!mounted) return null; // prevent hydration mismatch
     return ( 
-      <main className="min-h-screen text-neutral-900 antialiased dark:bg-zinc-950 dark:text-neutral-100 transition-colors duration-300 font-sans">
+      <main className="min-h-screen text-neutral-900 antialiased dark:text-neutral-100 transition-colors duration-300 font-sans">
         <header className="flex px-2 sm:px-6 py-4 md:px-10 center">
           <CustNavBar className="flex items-center w-[100%]" pageName="projects" isDark={dark} toggleTheme={toggleTheme}/>
         </header>
