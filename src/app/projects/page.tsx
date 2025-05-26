@@ -59,7 +59,7 @@ export default function AboutMe() {
                 <Card key={projects.title} className="relative min-w-[100%] h-auto sm:h-100 border items-center dark:bg-slate-800/10 text-center">
                         <h1 className="static top-0 text-xl sm:text-2xl lg:text-3xl">{projects.title}</h1>
                         <p className="text-lg px-5 text-start">{projects.description}</p>
-                        <Link href={projects.url} className="absolute bottom-0 py-3 mt-4 hover:underline flex items-center whitespace-nowrap">
+                        <Link href={projects.url} className="absolute bottom-0 py-3 mt-8 sm:mt-auto hover:underline flex items-center whitespace-nowrap">
                               github
                         </Link>
                 </Card>
