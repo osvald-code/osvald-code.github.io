@@ -15,7 +15,7 @@ import Particles from "@/components/Particles";
 export default function Home() {
   const [mounted, setMounted] = useState(false);
   const [dark, setDark] = useState(false);
-  const [scrolled, setScrolled] = useState(false); // <-- Add this
+  const [scrolled, setScrolled] = useState(false); 
 
   // Mount‑only effect to hydrate theme from localStorage
   useEffect(() => {
