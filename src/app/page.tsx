@@ -79,7 +79,7 @@ export default function Home() {
         </div>
       </Card>
       <div className="flex flex-col items-center bg-zinc-900/25 mt-10 w-[100%] justify-center">
-       <div className="flex flex-col text-center  sm:text-start text-xl sm:mx-15 p-3 sm:p-5 ">
+       <div className="flex flex-col text-center sm:text-start text-xl sm:mx-15 p-3 sm:px-15">
           <h2 className="text-2xl font-bold py-3 text-center ">hey, you made it!</h2>
           <p>my name is michael osvald</p> 
           <p>im a programmer driven by a passion for learning and personal development.</p>
