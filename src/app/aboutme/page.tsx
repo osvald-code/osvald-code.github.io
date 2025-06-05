@@ -23,7 +23,7 @@ export default function AboutMe() {
         setMounted(true);
         const stored = localStorage.getItem("theme");
         const prefersDark =
-          stored === "dark" || (!stored && window.matchMedia("(prefers-color-scheme: dark)").matches);
+          true; //stored === "dark" || (!stored && window.matchMedia("(prefers-color-scheme: dark)").matches); //need to configure colour
         setDark(prefersDark);
         document.documentElement.classList.toggle("dark", prefersDark);
       

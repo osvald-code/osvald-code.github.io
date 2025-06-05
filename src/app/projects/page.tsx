@@ -19,8 +19,7 @@ export default function AboutMe() {
     useEffect(() => {
       setMounted(true);
       const stored = localStorage.getItem("theme");
-      const prefersDark =
-        stored === "dark" || (!stored && window.matchMedia("(prefers-color-scheme: dark)").matches);
+        const prefersDark = true; //stored === "dark" || (!stored && window.matchMedia("(prefers-color-scheme: dark)").matches); //need to configure light mode
       setDark(prefersDark);
       document.documentElement.classList.toggle("dark", prefersDark);
     }, []);
