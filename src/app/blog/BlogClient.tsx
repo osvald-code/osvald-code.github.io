@@ -75,8 +75,8 @@ export default function BlogClient() {
         disableRotation={false}
       />
     </div>
-      <Card className="mx-2 sm:mx-20 my-4 flex items-center lg:shadow-xl shadow-black/50 justify-center dark:bg-slate-800/10">
-        <h1 className="text-4xl font-bold">blog</h1>
+      <Card className="mx-2 sm:mx-20 my-4 flex items-center lg:shadow-xl shadow-black/50 justify-center dark:bg-zinc-900/65">
+        <h1 className="text-xl sm:text-5xl lg:text-7xl py-4 flex justify-center items-center text-center">welcome to my blog!</h1>
         <Pagination className="mt-4 w-[100%]">
           <PaginationContent>
             <PaginationItem>
@@ -111,8 +111,8 @@ export default function BlogClient() {
           </PaginationContent>
         </Pagination>
         
-        <p className="text-lg mt-4">{posts[postIndex].name}</p>
-        <ScrollArea className="prose h-[80%] max-w-[100%] p-6 prose-headings:mt-8 prose-headings:font-semibold prose-h1:text-5xl prose-h2:text-4xl prose-h3:text-3xl prose-h4:text-2xl prose-h5:text-xl prose-h6:text-lg dark:prose-invert">
+        <p className="text-6xl mt-4">{posts[postIndex].name}</p>
+        <ScrollArea className="prose h-[80%] max-w-[100%] px-20 prose-headings:mt-8 prose-headings:font-semibold prose-h1:text-5xl prose-h2:text-4xl prose-h3:text-3xl prose-h4:text-2xl prose-h5:text-xl prose-h6:text-lg dark:prose-invert">
           <Post postName={posts[postIndex].name}/>
            <ScrollBar orientation="horizontal" />
         </ScrollArea>
