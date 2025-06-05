@@ -55,9 +55,9 @@ export default function AboutMe() {
         <div className="w-[100%] min-h-[100%] flex order grid gird-cols-1 md:grid-cols-2 p-4 lg:p-10 lg:mx-5 items-center justify-center gap-4">
             {projects.map((projects) =>
               (
-                <Card key={projects.title} className="relative min-w-[100%] md:min-w-auto h-auto md:min-h-140  border justifty-center items-center dark:bg-zinc-950/50 text-center">
+                <Card key={projects.title} className="relative min-w-[100%] md:min-w-auto h-auto md:min-h-170 lg:min-h-160 border justifty-center items-center dark:bg-zinc-950/50 text-center">
                         <h1 className="static top-0 text-xl sm:text-2xl lg:text-4xl">{projects.title}</h1>
-                        <p className="text-lg md:text-2xl lg:text-3xl px-5 mb-4 text-start">{projects.description}</p>
+                        <p className="text-lg md:text-2xl lg:text-2xl px-5 mb-4 text-start">{projects.description}</p>
                         <Link href={projects.url} target="_blank" className="absolute bottom-0 py-3 hover:underline flex items-center whitespace-nowrap">
                               github
                         </Link>
@@ -88,8 +88,8 @@ const projects: { title: string; url: string; description: string}[] = [
     description: "while only in its early stages, this C based project uses the devkitARM toolchain to render, move, and animate bitmap tiles them within a GBA emulator.", 
   },
   {
-    title: "Project 4",
-    url: "/.",
-    description: "this is a placeholder description", 
+    title: "Automation Framework",
+    url: "./projects",
+    description: "this was a propriety project creating for the Canadian Federal Government. it involved the planning, development, deployment, maintenance, and training of a Function Testing Automation Framework. created to equip low-code developers to quickly and accurately develop UI based functional testing, this project cut development time from 1.5 months to 5 days", 
   },
 ];
