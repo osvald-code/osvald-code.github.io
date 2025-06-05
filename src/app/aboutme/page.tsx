@@ -62,8 +62,7 @@ export default function AboutMe() {
 <Separator orientation="horizontal" className="min-h-[1px] mx-[2%] border-[1px] max-w-[95%]"/>
       <Card className="mx-2 sm:mx-20 my-4 flex flex-col items-center lg:shadow-xl shadow-black/50 justify-center min-h-[100%] lg:min-h-[calc(90vh-4rem)] dark:bg-slate-800/10"> 
         <div className="flex flex-col text-center text-xl items-center mt-4 p-3 sm:p-5">
-          <h1 className="text-xl sm:text-5xl lg:text-6xl py-4 font-bold flex justify-center items-center text-center">about me</h1>
-          <h2 className="text-2xl font-bold py-2 ">hey, you made it!</h2>
+          <h1 className="text-2xl sm:text-5xl lg:text-6xl py-4 font-bold flex justify-center items-center text-center">about me</h1>
           <p>Coming Soon!</p>
           <p>about me's are always difficult aren't they? soon this will be populated with info about me, including what programming languages, frameworks, and other tools i know.
             in the mean time, here's a pic i drew of me, and my current GitHub calendar.

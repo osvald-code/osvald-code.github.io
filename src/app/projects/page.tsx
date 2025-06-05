@@ -52,7 +52,7 @@ export default function AboutMe() {
       />
     </div>
       <div className="mx-2 sm:mx-20 my-4 min-h-[100%] items-center justify-center">
-        <h1 className="text-xl sm:text-5xl lg:text-7xl py-4 flex justify-center items-center text-center">projects</h1>
+        <h1 className="text-2xl sm:text-5xl lg:text-7xl py-4 flex justify-center items-center text-center">projects</h1>
         <div className="w-[100%] min-h-[100%] flex order grid gird-cols-1 md:grid-cols-2 p-4 lg:p-10 lg:mx-5 items-center justify-center gap-4">
             {projects.map((projects) =>
               (

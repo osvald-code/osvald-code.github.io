@@ -76,7 +76,7 @@ export default function BlogClient() {
       />
     </div>
       <Card className="mx-2 sm:mx-20 my-4 flex items-center lg:shadow-xl shadow-black/50 justify-center dark:bg-zinc-900/65">
-        <h1 className="text-xl sm:text-5xl lg:text-7xl py-4 flex justify-center items-center text-center">welcome to my blog!</h1>
+        <h1 className="text-2xl sm:text-5xl lg:text-7xl py-4 flex justify-center items-center text-center">welcome to my blog!</h1>
         <Pagination className="mt-4 w-[100%]">
           <PaginationContent>
             <PaginationItem>
