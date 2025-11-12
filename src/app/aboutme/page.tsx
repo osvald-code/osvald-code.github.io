@@ -64,11 +64,11 @@ export default function AboutMe() {
         <div className="flex flex-col text-center text-xl items-center mt-4 p-3 sm:p-5">
           <h1 className="text-2xl sm:text-5xl lg:text-6xl py-4 font-bold flex justify-center items-center text-center">about me</h1>
           <p>ooooo looks like you're curious!</p>
-          <p>My name is Michael Osvald. I'm currently a Software Deveploper Engineering in Test (SDET), based out of Ontario, Canada.
+          <p>My name is Michael Osvald. I'm currently a Software Deveploper Engineering in Test (SDET), based out of Ontario, Canada. 
             My background is in computer programming, and I've taken those principles into the world of Automated Testing.
             Currently, my role involves a mixture of creating, developing, and maintaining an Automation Framework, building and customizing testing tools,
             maintainting an automation infrastructure, and working with QA Analysts, QA testers, and consultants to provide a robust and high-quality testing experience.
-            <br />
+            <br/><br/>
             Beyond the workplace, I'm slowly amassing a collection of incomplete projects to tinker away at whenever I'm not spending time with my lovely spouse, our cat, and playing electric guitar.
             Pleased to meet you!
           </p>
