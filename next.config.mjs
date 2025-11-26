@@ -2,21 +2,26 @@
 import createMDX   from '@next/mdx'
 import remarkGfm   from 'remark-gfm'
 
+const  useMdxRs = !Boolean(process.env.GITHUB_ACTIONS)
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   pageExtensions: ['js','jsx','ts','tsx','md','mdx'],
-  experimental: { mdxRs: !Boolean(process.env.GITHUB_ACTIONS) },
+  experimental: { mdxRs: useMdxRs },
   distDir: 'out',
   output: 'export',
   images: { unoptimized: true },
 }
 
-const withMDX = createMDX({
-  options: {
-    remarkPlugins: [remarkGfm],     // must be a *function*, not undefined
-    rehypePlugins: [],
-  },
-})
+// Only include plugin functions when NOT using mdx-rs
+const mdxOptions = useMdxRs
+  ? { /* keep options serializable for mdx-rs */ }
+  : {
+      remarkPlugins: [remarkGfm],
+      rehypePlugins: [],
+    }
+
+const withMDX = createMDX({ options: mdxOptions })
 
 export default withMDX(nextConfig)
 

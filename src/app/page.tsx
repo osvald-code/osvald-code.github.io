@@ -43,8 +43,8 @@ export default function Home() {
   return (
     <main className="min-h-screen text-neutral-900 antialiased  dark:text-neutral-100 transition-colors duration-300 font-sans">      
       <header
-  className={`flex px-2 sm:px-6 py-4 md:px-10 rounded-b-lg sticky top-0 transition-all duration-300
-    ${scrolled ? "bg-zinc-900/80" : "bg-zinc-950/0"}`}
+  className={`flex px-2 sm:px-6 py-4 md:px-10 sticky top-0 transition-all duration-300
+    ${scrolled ? "bg-sky-200/70 dark:bg-zinc-900/80" : "bg-zinc-950/0"}`}
 >
         <CustNavBar className="flex items-center w-[100%]" pageName="home" isDark={dark} toggleTheme={toggleTheme}/>
       </header>
@@ -85,7 +85,7 @@ export default function Home() {
           <p>im a programmer driven by a passion for learning and personal development.</p>
           <p>"honing my craft" - as it were.</p> 
           <p>i believe in pursuing excellence, sharing knowledge, authenticity, and transparency.</p>
-          <p>this site has been created be a showcase of myself, including my projects, experiments, and some of my internal contemplations.</p>
+          <p>this site has been created to be a showcase of myself, including my projects, experiments, and some of my internal contemplations.</p>
           <h3 className ="text-2xl font-bold py-2" >have fun!</h3>
         </div>
       </div>

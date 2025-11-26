@@ -44,7 +44,7 @@ export default function AboutMe() {
   return (
     <main className="min-h-screen text-neutral-900 antialiased dark:text-neutral-100 transition-colors duration-300 font-sans">
       <header className={`flex px-2 sm:px-6 py-4 md:px-10 rounded-b-lg sticky top-0 transition-all duration-300
-    ${scrolled ? "bg-zinc-900/80" : "bg-zinc-950/0"}`}>
+    ${scrolled ? "bg-zinc-900/80" : "bg-blue-300/0"}`}>
         <CustNavBar className="flex items-center w-[100%]" pageName="about_me" isDark={dark} toggleTheme={toggleTheme} />
       </header>
       <div className="fixed inset-0 -z-10 w-full h-full pointer-events-none">

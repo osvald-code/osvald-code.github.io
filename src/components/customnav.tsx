@@ -52,7 +52,7 @@ const siteLinks: { title: string; url: string; icon: React.ReactNode }[] = [
   },
   {
     title: "about_me",
-    url: "/aboutme",
+    url: "/about_me",
     icon: <Smile/>,
   },
     {
