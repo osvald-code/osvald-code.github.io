@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import CustNavBar from "@/components/customnav"
-import { Home, NotebookPen, Binary, Cpu } from "lucide-react";
+import { Home, NotebookPen, Binary, Cpu, StarIcon } from "lucide-react";
 import { Card } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
 import DecryptedText from "@/components/ui/DecryptedText";
@@ -44,7 +44,7 @@ export default function AboutMe() {
   return (
     <main className="min-h-screen text-neutral-900 antialiased dark:text-neutral-100 transition-colors duration-300 font-sans">
       <header className={`flex px-2 sm:px-6 py-4 md:px-10 rounded-b-lg sticky top-0 transition-all duration-300
-    ${scrolled ? "bg-zinc-900/80" : "bg-blue-300/0"}`}>
+    ${scrolled ? "bg-zinc-900/80" : "bg-zinc-950/0"}`}>
         <CustNavBar className="flex items-center w-[100%]" pageName="about_me" isDark={dark} toggleTheme={toggleTheme} />
       </header>
       <div className="fixed inset-0 -z-10 w-full h-full pointer-events-none">
@@ -73,15 +73,20 @@ export default function AboutMe() {
             Pleased to meet you!
           </p>
           {/* TO DO: improve design of this UI */}
-          <p>ABSTRACT THINKING: 5</p>
-          <p>CODE QUALITY: 5</p>
-          <p>CRITICAL REASONING: 4</p>
-          <p>INITIATIVE: 4</p>
-          <p>MEMORIZATION: 3</p>
-          <p>TEAM PLAYER: 4</p>
-          <p>TIME MANAGEMENT: 4</p>
-          <p>APTITUDE: 5</p>
+          </div>
+        <h2 className="text-xl sm:text-3xl lg:text-4xl py-4 font-bold flex justify-center items-center text-center">skills &amp; competencies</h2>
+        {/*should probably have made this into components, but i dont intend to use this anywhere else*/ }
+        <div className="flex-col text-left text-lg sm:text-xl lg:text-2xl ">
+          <p className="flex">ABSTRACT THINKING:  <StarIcon/><StarIcon/><StarIcon/><StarIcon/><StarIcon/> </p>
+          <p className="flex">CODE QUALITY: <StarIcon/><StarIcon/><StarIcon/><StarIcon/><StarIcon/></p> 
+          <p className="flex">CRITICAL REASONING: <StarIcon/><StarIcon/><StarIcon/><StarIcon/></p>
+          <p className="flex">INITIATIVE: <StarIcon/><StarIcon/><StarIcon/><StarIcon/></p>
+          <p className="flex">MEMORIZATION: <StarIcon/><StarIcon/><StarIcon/></p>
+          <p className="flex">TEAM PLAYER: <StarIcon/><StarIcon/><StarIcon/><StarIcon/></p>
+          <p className="flex">TIME MANAGEMENT: <StarIcon/><StarIcon/><StarIcon/><StarIcon/></p>
+          <p className="flex">APTITUDE: <StarIcon/><StarIcon/><StarIcon/><StarIcon/><StarIcon/></p>
         </div>
+        
         <div className="w-full bg-zinc-900/30 mt-4 p-3 sm:p-5">
           <div className="flex justify-center w-full">
             <ScrollArea className="w-full">

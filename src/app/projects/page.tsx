@@ -85,11 +85,11 @@ const projects: { title: string; url: string; description: string}[] = [
     {
     title: "GBA Platformer",
     url: "https://github.com/osvald-code/GBA-Platformer",
-    description: "while only in its early stages, this C based project uses the devkitARM toolchain to render, move, and animate bitmap tiles them within a GBA emulator.", 
+    description: "while only in its early stages, this C based project uses the devkitARM toolchain to render, move, and animate bitmap tiles within a GBA emulator.", 
   },
   {
     title: "Automation Framework",
     url: "./projects",
-    description: "this was a propriety project creating for the Canadian Federal Government. it involved the planning, development, deployment, maintenance, and training of a Function Testing Automation Framework. created to equip low-code developers to quickly and accurately develop UI based functional testing, this project cut development time from 1.5 months to 5 days", 
+    description: "this was a propriety project created for the Canadian Federal Government. it involved the planning, development, deployment, maintenance, and training of a Functional Testing Automation Framework. created to equip low-code developers to quickly and accurately develop UI based functional testing, this project cut development time from 1.5 months to 5 days", 
   },
 ];
